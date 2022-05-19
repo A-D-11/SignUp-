@@ -5,18 +5,19 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 const Login=({handleChange})=>{
 
-    const paperStyle={padding :20,height:'73vh',width:300, margin:"0 auto"}
+    const paperStyle={padding :20,height:'60vh',width:380, margin:"0 auto"}
     const avatarStyle={backgroundColor:'#1bbd7e'}
-    const btnstyle={margin:'8px 0'}
+    const btnstyle={margin:'2rem 0'}
+    const sStyled={margin:'8px auto'}
     return(
         <Grid>
-            <Paper   style={paperStyle}>
+            <Paper elevation={15}  style={paperStyle}>
                 <Grid align='center'>
                      {/* <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar> */}
                     <h2>Sign In</h2>
                 </Grid>
                 <TextField label='Username' placeholder='Enter username' fullWidth required/>
-                <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>
+                <TextField label='Password' placeholder='Enter password' style={sStyled} type='password' fullWidth required/>
                 <FormControlLabel
                     control={
                     <Checkbox
@@ -32,11 +33,7 @@ const Login=({handleChange})=>{
                         Forgot password ?
                 </Link>
                 </Typography>
-                <Typography > Do you have an account ?
-                     <Link href="#" onClick={()=>handleChange("event",1)} >
-                        Sign Up 
-                </Link>
-                </Typography>
+                
             </Paper>
         </Grid>
     );
