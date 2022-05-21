@@ -33,7 +33,9 @@ const Login=({handleChange})=>{
                         Forgot password ?
                 </Link>
                 </Typography>
-                
+                <div className="modal-footer">
+                   <button type="button" className="btn-close bt-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
             </Paper>
         </Grid>
     );
